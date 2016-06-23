@@ -28,5 +28,6 @@ post '/j2' do
 	@TotalJugador2 = @@generala.imprimirPuntaje 1
     @@botonJugador1 = "";
 	@@botonJugador2 = "disabled";
+	@GanadorGenerala = @@generala.obtenerGanador
 	erb :generala_view
 end
