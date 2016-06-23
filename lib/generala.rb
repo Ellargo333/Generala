@@ -21,6 +21,14 @@ class Generala
 		@puntajesJugadores[0]
 	end
 
+	def obtenerGanador
+		if @puntajesJugadores[0] < @puntajesJugadores[1]
+			return "Ganador Jugador 2"
+		else
+			return "Ganador Jugador 1"
+		end
+	end
+
 #METODOS DE SALIDA
 
 	def imprimirTirada

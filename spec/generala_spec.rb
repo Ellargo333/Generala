@@ -23,5 +23,19 @@ describe "Generala" do
 		partida.obtenerPuntajeJugador1.should be_between(5,30)
 	end
 
+	it "Gano Jugador 1" do
+		partida = Generala.new
+		partida.tirada 0
+		partida.tirada 0
+		partida.obtenerGanador.should == "Ganador Jugador 1"
+	end
+
+	it "Gano Jugador 2" do
+		partida = Generala.new
+		partida.tirada 1
+		partida.tirada 1
+		partida.obtenerGanador.should == "Ganador Jugador 2"
+	end
+
 
 end
