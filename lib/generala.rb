@@ -15,6 +15,6 @@ class Generala
 	end
 
 	def imprimirTirada
-		@dados.to_s
+		"Dados Obtenidos : " + @dados.to_s
 	end
 end

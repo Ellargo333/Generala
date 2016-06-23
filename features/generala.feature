@@ -9,6 +9,6 @@ Scenario: Pantalla Inicial
 Scenario: Tira dado Jugador
 	Given  Entro a la aplicacion
 	When Tira dado Jugador
-	Then La pagina dice "4"
+	Then La pagina dice "Dados Obtenidos :"
 
 
