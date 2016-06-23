@@ -2,7 +2,11 @@ Given(/^Entro a la aplicacion$/) do
    visit '/'
 end
 
-When(/^Tira dado Jugador$/) do
+When(/^Tira dado Jugador2$/) do 
+	click_button("jugadaB")
+end
+
+When(/^Tira dado Jugador1$/) do 
 	click_button("jugadaA")
 end
 
