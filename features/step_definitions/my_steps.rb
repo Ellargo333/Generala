@@ -3,6 +3,7 @@ Given(/^Entro a la aplicacion$/) do
 end
 
 When(/^Tira dado Jugador2$/) do 
+	click_button("jugadaA")
 	click_button("jugadaB")
 end
 

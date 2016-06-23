@@ -6,6 +6,8 @@ get '/' do
 	@@generala=Generala.new
 	@TotalJugador1 ="0"
 	@TotalJugador2 ="0"
+    @@botonJugador1 = "";
+	@@botonJugador2 = "disabled";
 	erb :generala_view
 end
 
@@ -14,6 +16,8 @@ post '/j1' do
 	@dadosJugador ="Jugador 1: " + @@generala.imprimirTirada 
 	@TotalJugador1 = @@generala.imprimirPuntaje 0 
 	@TotalJugador2 = @@generala.imprimirPuntaje 1 
+    @@botonJugador1 = "disabled";
+	@@botonJugador2 = "";
 	erb :generala_view
 end
 
@@ -22,5 +26,7 @@ post '/j2' do
 	@dadosJugador = "Jugador 2: " + @@generala.imprimirTirada 
 	@TotalJugador1 = @@generala.imprimirPuntaje 0 
 	@TotalJugador2 = @@generala.imprimirPuntaje 1
+    @@botonJugador1 = "";
+	@@botonJugador2 = "disabled";
 	erb :generala_view
 end
