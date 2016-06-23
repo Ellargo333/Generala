@@ -1,10 +1,13 @@
 require 'sinatra'
+require_relative "./lib/generala.rb"
 
 get '/' do
-   erb :generala_view
+	@@generala=Generala.new
+	erb :generala_view
 end
 
-get '/j1' do
-   erb :generala_view
-	@dadosJugador1 = "4"
+post '/j1' do
+	@@generala.tirada
+	@dadosJugador1 = @@generala.imprimirTirada
+	erb :generala_view
 end
