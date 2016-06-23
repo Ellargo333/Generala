@@ -17,5 +17,11 @@ describe "Generala" do
 		retorno[4].should be_between(1,6) 
 	end
 
+	it "total suma de dados jugador 1" do
+		partida = Generala.new
+		retorno = partida.tirada
+		partida.obtenerPuntajeJugador1.should be_between(5,30)
+	end
+
 
 end
