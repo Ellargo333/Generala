@@ -7,19 +7,19 @@ describe "Generala" do
 	
 	it "carga valor en el primer dado jugador 1" do
 		partida = Generala.new
-		retorno = partida.tirada
+		retorno = partida.tirada 0
 		retorno[0].should be_between(1,6) 
 	end
 
 	it "carga valor en el ultimo dado jugador 1" do
 		partida = Generala.new
-		retorno = partida.tirada
+		retorno = partida.tirada 0
 		retorno[4].should be_between(1,6) 
 	end
 
 	it "total suma de dados jugador 1" do
 		partida = Generala.new
-		retorno = partida.tirada
+		retorno = partida.tirada 0
 		partida.obtenerPuntajeJugador1.should be_between(5,30)
 	end
 

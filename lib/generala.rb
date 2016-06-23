@@ -1,6 +1,6 @@
 class Generala
 	def initialize
-		@puntajeJugador1 = 0
+		@puntajesJugadores = [0, 0]
 		@dados = [0,0,0,0,0]
 	end
 	
@@ -8,17 +8,17 @@ class Generala
 		return 1 + rand(6)
 	end
 
-	def tirada
+	def tirada (jugador)
 		5.times do |i|
 			dadoActual = tirarDado 
 			@dados[i] = dadoActual
-			@puntajeJugador1 += dadoActual 
+			@puntajesJugadores[jugador] += dadoActual
 		end
 		return @dados
 	end
 
 	def obtenerPuntajeJugador1
-		@puntajeJugador1
+		@puntajesJugadores[0]
 	end
 
 #METODOS DE SALIDA
@@ -27,8 +27,8 @@ class Generala
 		"Dados Obtenidos : " + @dados.to_s
 	end
 
-	def imprimirPuntaje
-		@puntajeJugador1.to_s
+	def imprimirPuntaje (jugador)
+		@puntajesJugadores[jugador].to_s
 	end
 
 end
