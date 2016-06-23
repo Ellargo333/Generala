@@ -24,7 +24,7 @@ class Generala
 #METODOS DE SALIDA
 
 	def imprimirTirada
-		"Dados Obtenidos : " + @dados.to_s
+		@dados.to_s
 	end
 
 	def imprimirPuntaje (jugador)

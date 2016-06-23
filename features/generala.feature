@@ -9,11 +9,11 @@ Scenario: Pantalla Inicial
 Scenario: Tira dado Jugador1
 	Given  Entro a la aplicacion
 	When Tira dado Jugador1
-	Then La pagina dice "Dados Obtenidos :"
+	Then La pagina dice "Jugador 1:"
 
 Scenario: Tira dado Jugador2
 	Given  Entro a la aplicacion
 	When Tira dado Jugador2
-	Then La pagina dice "Dados Obtenidos :"
+	Then La pagina dice "Jugador 2:"
 
 
