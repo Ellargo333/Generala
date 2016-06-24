@@ -2,17 +2,28 @@ class Generala
 	def initialize
 		@puntajesJugadores = [0, 0]
 		@dados = [0,0,0,0,0]
+		@dadoselegidos = [false,false,false,false,false]
 	end
 	
-	def tirarDado
-		return 1 + rand(6)
+	def formatearelegidos
+		@dadoselegidos = [false,false,false,false,false]
 	end
+
+	def setValorDadoElegidos(dado, valor)
+		@dadoselegidos[dado] = valor
+	end
+
+	def getValorDadoElegidos()
+		return 	@dadoselegidos
+	end	
 
 	def tirada (jugador)
 		5.times do |i|
-			dadoActual = tirarDado 
-			@dados[i] = dadoActual
-			@puntajesJugadores[jugador] += dadoActual
+			if not (@dadoselegidos[i])
+				dadoActual = 1 + rand(6) 
+				@dados[i] = dadoActual
+				@puntajesJugadores[jugador] += dadoActual
+			end
 		end
 		return @dados
 	end

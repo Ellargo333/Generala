@@ -42,5 +42,25 @@ describe "Generala" do
 		partida.obtenerGanador.should == "Empate"
 	end
 
+	it "Jugador 1 elige dado 1 " do
+		partida = Generala.new
+		retorno = partida.tirada 0
+		@valordado1 = retorno[0].to_s
+		partida.setValorDadoElegidos(0,true)
+		retorno = partida.tirada 0
+		retorno[0].to_s.should == @valordado1
+	end
+
+	it "Jugador 1 elige dado 1 ternima su jugada y se formatea dados elegidos" do
+		partida = Generala.new
+		retorno = partida.tirada 0
+		@valordado1 = retorno[0].to_s
+		partida.setValorDadoElegidos(0,true)
+		retorno = partida.tirada 0
+		partida.formatearelegidos
+		elegidos = partida.getValorDadoElegidos
+		elegidos[0].to_s.should == "false"
+	end
+
 
 end
