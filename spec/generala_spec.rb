@@ -20,6 +20,12 @@ describe "Generala" do
 	it "total suma de dados jugador 1" do
 		partida = Generala.new
 		retorno = partida.tirada 0
+		partida.setpuntajejugador(0,0)
+		partida.setpuntajejugador(0,1)
+		partida.setpuntajejugador(0,2)
+		partida.setpuntajejugador(0,3)
+		partida.setpuntajejugador(0,4)
+		partida.setpuntajejugador(0,5)
 		partida.obtenerPuntajeJugador1.should be_between(5,30)
 	end
 
@@ -27,19 +33,31 @@ describe "Generala" do
 		partida = Generala.new
 		partida.tirada 0
 		partida.tirada 0
-		partida.obtenerGanador.should == "Ganador Jugador 1"
+		partida.setpuntajejugador(0,0)
+		partida.setpuntajejugador(0,1)
+		partida.setpuntajejugador(0,2)
+		partida.setpuntajejugador(0,3)
+		partida.setpuntajejugador(0,4)
+		partida.setpuntajejugador(0,5)
+		partida.obtenerGanador.should == "Ganador Jugador 1!"
 	end
 
 	it "Gano Jugador 2" do
 		partida = Generala.new
 		partida.tirada 1
 		partida.tirada 1
-		partida.obtenerGanador.should == "Ganador Jugador 2"
+		partida.setpuntajejugador(1,0)
+		partida.setpuntajejugador(1,1)
+		partida.setpuntajejugador(1,2)
+		partida.setpuntajejugador(1,3)
+		partida.setpuntajejugador(1,4)
+		partida.setpuntajejugador(1,5)
+		partida.obtenerGanador.should == "Ganador Jugador 2!"
 	end
 
 	it "Empate" do
 		partida = Generala.new
-		partida.obtenerGanador.should == "Empate"
+		partida.obtenerGanador.should == "Empate!"
 	end
 
 	it "Jugador 1 elige dado 1 " do

@@ -19,7 +19,7 @@ Scenario: Tira dado Jugador2
 Scenario: Ganador Jugador
 	Given  Entro a la aplicacion
 	When Tira dado Jugador2
-	Then La pagina dice "Ganador Jugador"
+	Then La pagina dice "!"
 
 
 
