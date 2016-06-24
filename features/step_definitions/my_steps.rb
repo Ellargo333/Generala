@@ -4,6 +4,10 @@ end
 
 When(/^Tira dado Jugador2$/) do 
 	click_button("Jugador 1")
+	click_button("Jugador 1")
+	click_button("Jugador 1")
+	click_button("Jugador 2")
+	click_button("Jugador 2")
 	click_button("Jugador 2")
 end
 
