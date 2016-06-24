@@ -37,5 +37,10 @@ describe "Generala" do
 		partida.obtenerGanador.should == "Ganador Jugador 2"
 	end
 
+	it "Empate" do
+		partida = Generala.new
+		partida.obtenerGanador.should == "Empate"
+	end
+
 
 end
