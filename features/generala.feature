@@ -21,6 +21,14 @@ Scenario: Ganador Jugador
 	When Tira dado Jugador2
 	Then La pagina dice "Ganador Jugador"
 
+Scenario: Cantidad Tiradas Jugador1
+	Given  Entro a la aplicacion
+	Then La pagina dice "Tiradas: 0"
+
+Scenario: Cantidad Tiradas Jugador1
+	Given  Entro a la aplicacion
+	When Tira dado Jugador1
+	Then La pagina dice "Tiradas: 1"
 
 
 
