@@ -4,7 +4,7 @@ Feature: Generala
 
 Scenario: Pantalla Inicial
 	Given  Entro a la aplicacion
-	Then La pagina dice "GENERALA 1.0"
+	Then La pagina dice "GENERALA 1.1"
 
 Scenario: Tira dado Jugador1
 	Given  Entro a la aplicacion

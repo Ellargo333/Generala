@@ -1,4 +1,4 @@
-<h1>GENERALA 1.0</h1>
+<h1>GENERALA 1.1</h1>
 <h2>Ultron Edition</h2>
 
 <table>
@@ -6,6 +6,27 @@
 		<td>	
 			<form action="/j1" method="POST">
 			  <input name="jugadaA" type="submit" value="Jugador 1" <%= @@botonJugador1%> />
+				<p> <%= @dadosJugador1 %> </p>
+				 &nbsp; <%= @tiradaJugador1  %> 
+				<table>
+					<tr>
+						<td>
+							<input type="checkbox" name="Dado1" value="Dado1">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado2" value="Dado2">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado3" value="Dado3">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado4" value="Dado4">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado5" value="Dado5">
+						</td>
+					</tr>
+				</table>
 			</form>
 		</td>
 		<td>
@@ -16,6 +37,30 @@
 		<td>
 			<form action="/j2" method="POST">
 			  <input name="jugadaB" type="submit" value="Jugador 2" <%= @@botonJugador2%> />
+				<p> <%= @dadosJugador2 %> </p>
+				 &nbsp; <%= @tiradaJugador2  %> 
+				<table>
+					<tr>
+						<td>
+							<input type="checkbox" name="Dado1" value="Dado1">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado2" value="Dado2">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado3" value="Dado3">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado4" value="Dado4">
+						</td>
+						<td>
+							<input type="checkbox" name="Dado5" value="Dado5">
+						</td>
+					</tr>
+				</table>
+
+
+
 			</form>			
 		</td>
 		<td>
@@ -24,26 +69,6 @@
 	</tr>
 </table>
 <p> Tiradas: <%= @@CantidadTiradas %> </p>
-<p> <%= @dadosJugador %> </p>
- &nbsp; <%= @@generala.imprimirTirada  %> 
-<table>
-	<tr>
-		<td>
-			<input type="checkbox" name="Dado1" value="Dado1">
-		</td>
-		<td>
-			<input type="checkbox" name="Dado2" value="Dado2">
-		</td>
-		<td>
-			<input type="checkbox" name="Dado3" value="Dado3">
-		</td>
-		<td>
-			<input type="checkbox" name="Dado4" value="Dado4">
-		</td>
-		<td>
-			<input type="checkbox" name="Dado5" value="Dado5">
-		</td>
-	</tr>
-</table>
+
 <p><%= @GanadorGenerala %> </p>
 
