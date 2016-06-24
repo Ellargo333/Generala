@@ -1,15 +1,29 @@
 <h1>GENERALA 1.0</h1>
 <h2>Ultron Edition</h2>
-<form action="/j1" method="POST">
-  <input name="jugadaA" type="submit" value="jugadaA" <%= @@botonJugador1%> />
-</form>
 
+<table>
+	<tr>
+		<td>	
+			<form action="/j1" method="POST">
+			  <input name="jugadaA" type="submit" value="Jugador 1" <%= @@botonJugador1%> />
+			</form>
+		</td>
+		<td>
+			<p>Total: <%= @TotalJugador1 %> </p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<form action="/j2" method="POST">
+			  <input name="jugadaB" type="submit" value="Jugador 2" <%= @@botonJugador2%> />
+			</form>			
+		</td>
+		<td>
+			<p>Total: <%= @TotalJugador2 %> </p>
+		</td>
+	</tr>
+</table>
 
-<form action="/j2" method="POST">
-  <input name="jugadaB" type="submit" value="jugadaB" <%= @@botonJugador2%> />
-</form>
 <p> <%= @dadosJugador %> </p>
-<p>Total Jugador 1 : <%= @TotalJugador1 %> </p>
-<p>Total Jugador 2 : <%= @TotalJugador2 %> </p>
 <p><%= @GanadorGenerala %> </p>
 
