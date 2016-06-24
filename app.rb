@@ -47,15 +47,18 @@ post '/j1' do
 	@@generala.setValorDadoElegidos( 3, @dado4) 
 	@@generala.setValorDadoElegidos( 4, @dado5)
 
+	@TotalJugador1 = @@generala.imprimirPuntaje 0 
+	@TotalJugador2 = @@generala.imprimirPuntaje 1
+
 	@@generala.tirada 0
 	@dadosJugador1 ="Jugador 1: " 
     @tiradaJugador1 = @@generala.imprimirTirada
-	@TotalJugador1 = @@generala.imprimirPuntaje 0 
-	@TotalJugador2 = @@generala.imprimirPuntaje 1
 	if (@@CantidadTiradas == 2)
 		@@botonJugador1 = "disabled"
 		@@botonJugador2 = ""
 		@@CantidadTiradas = 0
+		@@generala.calculartirada 0
+		@TotalJugador1 = @@generala.imprimirPuntaje 0
 	else
     	@@CantidadTiradas += 1
     end 	 
@@ -102,16 +105,24 @@ post '/j2' do
 	@@generala.tirada 1
 	@dadosJugador2 = "Jugador 2: "  
     @tiradaJugador2 = @@generala.imprimirTirada
+
 	@TotalJugador1 = @@generala.imprimirPuntaje 0 
 	@TotalJugador2 = @@generala.imprimirPuntaje 1
+
 	if (@@CantidadTiradas == 2)
 		@@botonJugador1 = ""
 		@@botonJugador2 = "disabled"
 		@@CantidadTiradas = 0
+		
+		@@generala.calculartirada 1
+		@TotalJugador2 = @@generala.imprimirPuntaje 1
+
 		@GanadorGenerala = @@generala.obtenerGanador
 	else
 		@@CantidadTiradas += 1
     end 
+
+	
 	
 	erb :generala_view
 end

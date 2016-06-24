@@ -29,8 +29,8 @@ class Generala
 	
 	def setpuntajejugador (jugador, valorelegido)
 		@jugadasdeljugador[jugador][valorelegido] = true
-		calculartirada(jugador,valorelegido)
-		calculartotalJugador(jugador,valorelegido)	
+		calculartirada(jugador)
+		#calculartotalJugador(jugador,valorelegido)	
 	end
 	
 	def calculartotalJugador (jugador, valorelegido)
@@ -48,14 +48,14 @@ class Generala
 		return @dados
 	end
 
-	def calculartirada (jugador,valorelegido)
+	def calculartirada (jugador)
 		@valor_aux  = 0
 		5.times do |i|
-			if (@dados[i] == (valorelegido + 1))
-				@valor_aux += @dados[i]
-			end
+			#if (@dados[i] == (valorelegido + 1))
+			@valor_aux += @dados[i]
+			#end
 		end
-		@puntajejugador[jugador][valorelegido] = @valor_aux
+		@puntajesJugadores[jugador] += @valor_aux
 	end
 
 	def obtenerPuntajeJugador1

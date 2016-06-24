@@ -21,11 +21,6 @@ describe "Generala" do
 		partida = Generala.new
 		retorno = partida.tirada 0
 		partida.setpuntajejugador(0,0)
-		partida.setpuntajejugador(0,1)
-		partida.setpuntajejugador(0,2)
-		partida.setpuntajejugador(0,3)
-		partida.setpuntajejugador(0,4)
-		partida.setpuntajejugador(0,5)
 		partida.obtenerPuntajeJugador1.should be_between(5,30)
 	end
 
